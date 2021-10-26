@@ -18,7 +18,7 @@ function tipodeFichero($extension)
             $mensaje = "Documento de texto";
             echo $mensaje;
             break;
-        case ($tipo = "HTML"):
+        case ($tipo = "HTML"):case ($tipo = "HTM"):
             $mensaje = "Documento HTML";
             echo $mensaje;
             break;
