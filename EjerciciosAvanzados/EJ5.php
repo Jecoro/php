@@ -7,6 +7,7 @@
    if(empty($cant)){
     echo"No has introducido una cantidad";
 }else{
+    if(is_numeric($cant)){
    switch ($divisa) {
     case ($divisa == "dolares"):
         $cambio = 1.325;
@@ -21,9 +22,13 @@
         $cambio = 1.515;
         break;  
 }
-   $nuevaCantidad=$cant*$cambio;
-   echo $cant."€ son = ".$nuevaCantidad." ".$divisa;
-   echo"</br>";
-   echo"<a href=".$_SERVER["HTTP_REFERER"].">VOLVER</a>";
+$nuevaCantidad=$cant*$cambio;
+echo $cant."€ son = ".$nuevaCantidad." ".$divisa;
+echo"</br>";
+echo"<a href=".$_SERVER["HTTP_REFERER"].">VOLVER</a>";    
+}else{
+    echo"No has introducido un numero";
+}
+  
 }   
 ?>

@@ -4,8 +4,13 @@
    if(empty($cant)){
         echo"No has introducido una cantidad";
    }else{
-    $pesetas=$cant*166.386;
-    echo $cant."€ son = ".$pesetas;
+    if(is_numeric($cant)){    
+       $pesetas=$cant*166.386;
+      echo $cant."€ son = ".$pesetas." pesetas";
+   }else{
+      echo"No has introducido un numero";
+   }  
+
    }
    echo"<a href=".$_SERVER["HTTP_REFERER"].">VOLVER</a>";
 ?>
